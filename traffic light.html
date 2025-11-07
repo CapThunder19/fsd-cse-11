@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Light</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2c3e50;
+            font-family: Arial, sans-serif;
+        }
+
+        .traffic-light {
+            background-color: #34495e;
+            border: 8px solid #2c3e50;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+        }
+
+        .light {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 15px auto;
+            border: 3px solid #1a252f;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .light::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            left: 25%;
+            width: 30%;
+            height: 20%;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            transform: rotate(-45deg);
+        }
+
+        .red {
+            background: radial-gradient(circle at 30% 30%, #ff6b6b, #c0392b);
+            box-shadow: 0 0 20px #ff6b6b;
+        }
+
+        .yellow {
+            background: radial-gradient(circle at 30% 30%, #ffeb3b, #f39c12);
+            box-shadow: 0 0 20px #ffeb3b;
+        }
+
+        .green {
+            background: radial-gradient(circle at 30% 30%, #4caf50, #27ae60);
+            box-shadow: 0 0 20px #4caf50;
+        }
+
+        .light.off {
+            background: #555;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+
+
+     
+
+       
+    </style>
+</head>
+<body>
+    <div>
+        <div class="traffic-light">
+            <div class="light red" id="redLight"></div>
+            <div class="light yellow" id="yellowLight"></div>
+            <div class="light green" id="greenLight"></div>
+        </div>
+        
+        
+    </div>
+
+
+</body>
+</html>
